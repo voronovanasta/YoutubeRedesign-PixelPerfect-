@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Mulish', 'sans-serif';
+  --radius-5xl: 4rem;
+  --breakpoint-ls: 32rem;
+}
+
+.switch::before {
+  position: absolute;
+  content: '';
+  background: #2196f3;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #2196f3;
+  border-radius: 1rem;
+  top: 2px;
+  right: 2px;
+  box-shadow: 0px 1px 1px 0px #0000003d;
+}
+
+@media (width <= 40rem) {
+  .switch::before {
+    position: absolute;
+    content: '';
+    background: #2196f3;
+    width: 1rem;
+    height: 1rem;
+    border: 0.5px solid #2196f3;
+    border-radius: 1rem;
+    top: 1.36px;
+    right: 1.36px;
+    box-shadow: 0px 1px 1px 0px #0000003d;
+  }
+}
