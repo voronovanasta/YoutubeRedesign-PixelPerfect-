@@ -7,10 +7,16 @@ import user5 from '../assets/sidebar/sub5.png';
 import user6 from '../assets/sidebar/sub6.png';
 import SidebarItem from './SidebarItem';
 import SubscriptionItem from './SubscriptionItem';
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = ({ style }) => {
+  const navigate = useNavigate();
+  const onClick = () => {
+    navigate('/channel');
+  };
   return (
     <aside style={style} className='hidden sm:block space-y-15 pl-8 pr-12 pb-10'>
+      <button onClick={onClick}> Click</button>
       <div className='space-y-7'>
         <SidebarItem color={'#FF0000'} width={20} height={19} id={'HomeIcon'} text={'Home'} />
         <SidebarItem width={16} height={21} id={'FireIcon'} text={'Trending'} />
