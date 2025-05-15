@@ -2,13 +2,12 @@ import React from 'react';
 import avatar from '../../assets/FoodAvatar.png';
 import avatarMobile from '../../assets/FoodAvatar-mobile.png';
 import sprite from '../../assets/sprite.svg';
-
 import cover from '../../assets/video-channel-cover.png';
 import VideoControls from '../../components/VideoControls';
 
 const MainContainer = () => {
   return (
-    <div className='1xs:w-[85.1875rem]'>
+    <div className='3xl:w-[85.1875rem]'>
       <article className={'flex flex-col  sm:rounded-[0.875rem] sm:overflow-hidden'}>
         <div className='relative sm:h-[43.75rem] h-[11.25rem]'>
           <img className='w-full h-full object-cover' src={cover} alt='cover' />

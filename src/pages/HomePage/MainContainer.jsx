@@ -17,6 +17,8 @@ import pic13 from '../../assets/cards/Cover13.png';
 import pic14 from '../../assets/cards/Cover14.png';
 import pic15 from '../../assets/cards/Cover15.png';
 import Card from '../../components/Card';
+import LeftIcon from '../../assets/Left.svg';
+import RightIcon from '../../assets/Right.svg';
 
 const MainContainer = () => {
   return (
@@ -29,10 +31,10 @@ const MainContainer = () => {
           </div>
           <div className='sm:flex hidden items-end gap-2.5 pr-37.5 self-end'>
             <button className='flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'>
-              <img src={'/src/assets/Left.svg'} />
+              <img src={LeftIcon} />
             </button>
             <button className=' flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'>
-              <img src={'/src/assets/Right.svg'} />
+              <img src={RightIcon} />
             </button>
           </div>
         </div>
@@ -93,10 +95,10 @@ const MainContainer = () => {
           <h1 className='text-left font-bold text-[1.625rem] leading-6.5'>Recommended</h1>
           <div className='flex  items-end gap-2.5 pr-37.5 self-end'>
             <button className='flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'>
-              <img src={'/src/assets/Left.svg'} />
+              <img src={LeftIcon} />
             </button>
             <button className=' flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'>
-              <img src={'/src/assets/Right.svg'} />
+              <img src={RightIcon} />
             </button>
           </div>
         </div>
@@ -151,10 +153,10 @@ const MainContainer = () => {
             </button>
             <div className='flex gap-2.5'>
               <button className='flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'>
-                <img src={'/src/assets/Left.svg'} />
+                <img src={LeftIcon} />
               </button>
               <button className=' flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'>
-                <img src={'/src/assets/Right.svg'} />
+                <img src={RightIcon} />
               </button>
             </div>
           </div>

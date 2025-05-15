@@ -14,6 +14,8 @@ import sub2 from '../../assets/sidebar/sub8.png';
 import sub3 from '../../assets/sidebar/sub9.png';
 import video from '../../assets/video-cover.png';
 import avatarMobile from '../../assets/Avatar-mobile.png';
+import LeftIcon from '../../assets/Left.svg';
+import RightIcon from '../../assets/Right.svg';
 
 const MainContainer = () => {
   return (
@@ -161,10 +163,10 @@ const MainContainer = () => {
           </h1>
           <div className='sm:flex hidden items-end gap-2.5 pr-37 self-end'>
             <button className='flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'>
-              <img src={'/src/assets/Left.svg'} />
+              <img src={LeftIcon} />
             </button>
             <button className=' flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'>
-              <img src={'/src/assets/Right.svg'} />
+              <img src={RightIcon} />
             </button>
           </div>
         </div>
