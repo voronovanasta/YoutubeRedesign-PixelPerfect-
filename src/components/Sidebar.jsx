@@ -8,11 +8,13 @@ import user6 from '../assets/sidebar/sub6.png';
 import SidebarItem from './SidebarItem';
 import SubscriptionItem from './SubscriptionItem';
 
-const Sidebar = ({ style }) => {
+const Sidebar = ({ className }) => {
   return (
-    <aside style={style} className='hidden sm:block space-y-15 pl-8 pr-12 pb-10'>
+    <aside
+      className={`${className ?? ''} hidden scrollbar-none sticky top-0 overflow-y-auto  sm:block space-y-15 pl-8 pr-12 pb-10`}
+    >
       <div className='space-y-7'>
-        <SidebarItem color={'#FF0000'} width={20} height={19} id={'HomeIcon'} text={'Home'} />
+        <SidebarItem isActive width={20} height={19} id={'HomeIcon'} text={'Home'} />
         <SidebarItem width={16} height={21} id={'FireIcon'} text={'Trending'} />
         <SidebarItem width={18} height={18} id={'FolderIcon'} text={'Subscription'} />
       </div>

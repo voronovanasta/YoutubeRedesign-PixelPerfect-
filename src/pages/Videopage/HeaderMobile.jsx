@@ -1,9 +1,9 @@
 import React from 'react';
 import sprite from '../../assets/sprite.svg';
 
-const HeaderMobile = ({ style }) => {
+const HeaderMobile = () => {
   return (
-    <header style={style} className='sm:hidden flex justify-between px-4 mt-3 mb-6.5'>
+    <header className='sm:hidden flex justify-between px-4 mt-3 mb-6.5'>
       <div className='flex items-center mr-10.5'>
         <svg className='shrink-0' width='116' height='25'>
           <use xlinkHref={`${sprite}#Youtube`} />
@@ -14,9 +14,9 @@ const HeaderMobile = ({ style }) => {
           <use xlinkHref={`${sprite}#search`} />
         </svg>
         <div className='flex flex-col gap-0.5'>
-          <button className={'w-1.5 h-1.5  border-none bg-[#000000] rounded-full'} />
-          <button className={'w-1.5 h-1.5  border-none bg-[#000000] rounded-full'} />
-          <button className={'w-1.5 h-1.5  border-none bg-[#000000] rounded-full'} />
+          <div className={'w-1.5 h-1.5  border-none bg-[#000000] rounded-full'} />
+          <div className={'w-1.5 h-1.5  border-none bg-[#000000] rounded-full'} />
+          <div className={'w-1.5 h-1.5  border-none bg-[#000000] rounded-full'} />
         </div>
       </div>
     </header>

@@ -1,9 +1,39 @@
 @import 'tailwindcss';
 
+#root {
+  @apply min-h-screen max-h-screen flex flex-col font-display font-normal text-base leading-4 text-[#192646];
+}
+
 @theme {
   --font-display: 'Mulish', 'sans-serif';
   --radius-5xl: 4rem;
   --breakpoint-ls: 32rem;
+  --breakpoint-3xl: 105rem;
+  --breakpoint-1xs: 53rem;
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+}
+
+button,
+svg,
+h1,
+h2,
+h3 {
+  cursor: pointer;
+}
+
+button:hover,
+svg:hover,
+h1:hover,
+h2:hover,
+h3:hover {
+  color: blue;
+}
+
+a:hover {
+  font-weight: 700;
 }
 
 .switch::before {

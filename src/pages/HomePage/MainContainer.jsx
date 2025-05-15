@@ -17,76 +17,68 @@ import pic13 from '../../assets/cards/Cover13.png';
 import pic14 from '../../assets/cards/Cover14.png';
 import pic15 from '../../assets/cards/Cover15.png';
 import Card from '../../components/Card';
-import RedButton from '../../components/RedButton';
 
 const MainContainer = () => {
   return (
-    <div className='space-y-12.5 sm:pl-4 mb-3.5'>
-      <div className='hidden sm:block space-y-7.5'>
-        <div className='flex flex-start items-center relative'>
-          <img className='pr-5' src={user} alt='user' />
-          <h1 className='text-left font-bold text-[1.625rem] leading-6.5'>Dollie Blair</h1>
-          <div className='flex items-center gap-2.5 absolute top-6 right-37.5'>
-            <button
-              style={{
-                backgroundImage: "url('/src/assets/Left.svg')",
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-              }}
-              className=' flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'
-            ></button>
-            <button
-              style={{
-                backgroundImage: "url('/src/assets/Right.svg')",
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-              }}
-              className=' flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'
-            ></button>
+    <div className=' space-y-12.5 sm:pl-4 mb-3.5 flex-1 min-w-0'>
+      <div className='space-y-7.5'>
+        <div className='sm:flex hidden justify-between items-center'>
+          <div className='flex gap-4 items-center'>
+            <img src={user} alt='user' />
+            <h1 className='text-left font-bold text-[1.625rem] leading-6.5'>Dollie Blair</h1>
+          </div>
+          <div className='sm:flex hidden items-end gap-2.5 pr-37.5 self-end'>
+            <button className='flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'>
+              <img src={'/src/assets/Left.svg'} />
+            </button>
+            <button className=' flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'>
+              <img src={'/src/assets/Right.svg'} />
+            </button>
           </div>
         </div>
-        <div className='flex gap-10'>
+        <div className='overflow-x-auto w-full scrollbar-none flex sm:gap-10 gap-7.5 flex-col sm:flex-row'>
           <Card
+            className='sm:w-[15.625rem]'
             time={'4:15'}
-            dimensions={{ width: 15.625, height: 9.375 }}
             src={pic1}
             heading={'A Brief History Of Creation'}
             data={'80k views  ·  3 days ago'}
             user={'Dollie Blair'}
           />
           <Card
+            className='sm:w-[15.625rem]'
             time={'8:00'}
-            dimensions={{ width: 15.625, height: 9.375 }}
             src={pic2}
             heading={'Selecting The Right Hotel'}
             data={'123k views  ·  1 months ago'}
             user={'Dollie Blair'}
           />
           <Card
+            className='sm:w-[15.625rem]'
             time={'5:32'}
-            dimensions={{ width: 15.625, height: 9.375 }}
             src={pic3}
             heading={'Asteroids'}
             data={'43k views  ·  12 days ago'}
             user={'Dollie Blair'}
           />
           <Card
+            className='sm:w-[15.625rem]'
             time={'6:40'}
-            dimensions={{ width: 15.625, height: 9.375 }}
             src={pic4}
             heading={'Telescopes 101'}
             data={'11k views  ·  6 months ago'}
             user={'Dollie Blair'}
           />
           <Card
+            className='sm:w-[15.625rem]'
             time={'1:45'}
-            dimensions={{ width: 15.625, height: 9.375 }}
             src={pic5}
             heading={'Medical Care Is Just'}
             data={'18k views  ·  2 days ago'}
             user={'Dollie Blair'}
           />
           <Card
+            className='sm:w-[15.625rem]'
             time={'2:12'}
             dimensions={{ width: 15.625, height: 9.375, lastChildWidth: 13.4375 }}
             src={pic6}
@@ -96,32 +88,23 @@ const MainContainer = () => {
           />
         </div>
       </div>
-      <div className='hidden sm:block space-y-7.5 pt-1.5'>
-        <div className='flex flex-start items-center relative'>
+      <div className='space-y-7.5 pt-1.5'>
+        <div className='sm:flex hidden justify-between items-center'>
           <h1 className='text-left font-bold text-[1.625rem] leading-6.5'>Recommended</h1>
-          <div className='flex items-center gap-2.5 absolute top-0 right-37.5'>
-            <button
-              style={{
-                backgroundImage: "url('/src/assets/Left.svg')",
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-              }}
-              className=' flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'
-            ></button>
-            <button
-              style={{
-                backgroundImage: "url('/src/assets/Right.svg')",
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-              }}
-              className=' flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'
-            ></button>
+          <div className='flex  items-end gap-2.5 pr-37.5 self-end'>
+            <button className='flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'>
+              <img src={'/src/assets/Left.svg'} />
+            </button>
+            <button className=' flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'>
+              <img src={'/src/assets/Right.svg'} />
+            </button>
           </div>
         </div>
-        <div className='flex gap-10'>
+        <div className='overflow-x-auto w-full scrollbar-none flex sm:gap-10 gap-7.5 flex-col sm:flex-row'>
           <Card
             time={'3:40'}
-            dimensions={{ width: 33.75, height: 15.625 }}
+            isBig
+            className='sm:w-[33.75rem]'
             src={pic13}
             heading={'Dude You Re Getting A Telescope'}
             data={'34k views  ·  5 months ago'}
@@ -129,7 +112,8 @@ const MainContainer = () => {
           />
           <Card
             time={'2:12'}
-            dimensions={{ width: 33.75, height: 15.625 }}
+            isBig
+            className='sm:w-[33.75rem]'
             src={pic14}
             heading={'Moon Gazing'}
             data={'54k views  ·  11 months ago'}
@@ -137,7 +121,8 @@ const MainContainer = () => {
           />
           <Card
             time={'2:12'}
-            dimensions={{ width: 33.75, height: 15.625, lastChildWidth: 31.5625 }}
+            isBig
+            className='sm:w-[33.75rem]'
             src={pic15}
             heading={'Moon Gazing'}
             data={'125k views  ·  4 months ago'}
@@ -146,118 +131,86 @@ const MainContainer = () => {
         </div>
       </div>
       <div className='hidden sm:block space-y-7.5'>
-        <div className='flex flex-start items-center relative'>
-          <img className='pr-5 self-end' src={foodPic} alt='user' />
-          <div className='flex flex-start items-baseline'>
-            <h1 className='text-left font-bold text-[1.625rem] leading-6.5 mr-5'>Food & Drink</h1>
-            <p className='font-normal text-base leading-4 text-[#C2C2C2]'>
-              Recommended channel for you
-            </p>
+        <div className='flex justify-between items-center'>
+          <div className='sm:flex hidden gap-4 items-center'>
+            <img src={foodPic} alt='user' />
+            <div className='flex flex-start items-baseline'>
+              <h1 className='text-left font-bold text-[1.625rem] leading-6.5 mr-5'>Food & Drink</h1>
+              <p className='font-normal text-base leading-4 text-[#C2C2C2]'>
+                Recommended channel for you
+              </p>
+            </div>
           </div>
-          <RedButton top={16} right={255} />
-          <div className='flex items-center gap-2.5 absolute top-6 right-37.5'>
+          <div className='flex gap-10 pr-37.5 items-center'>
             <button
-              style={{
-                backgroundImage: "url('/src/assets/Left.svg')",
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-              }}
-              className=' flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'
-            ></button>
-            <button
-              style={{
-                backgroundImage: "url('/src/assets/Right.svg')",
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-              }}
-              className=' flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'
-            ></button>
+              className={
+                'hidden sm:flex justify-center items-center w-38.5 h-10 bg-[#FF0000] text-white rounded-[1.25rem]'
+              }
+            >
+              Subscribe 2.3m
+            </button>
+            <div className='flex gap-2.5'>
+              <button className='flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'>
+                <img src={'/src/assets/Left.svg'} />
+              </button>
+              <button className=' flex justify-center items-center w-7 h-7 bg-black opacity-25 rounded-full'>
+                <img src={'/src/assets/Right.svg'} />
+              </button>
+            </div>
           </div>
         </div>
-        <div className='flex gap-10'>
-          <Card
-            time={'2:12'}
-            dimensions={{ width: 15.625, height: 9.375 }}
-            src={pic7}
-            heading={'Astronomy Or Astrology'}
-            data={'240k views  ·  4 months ago'}
-            user={'Food & Drink'}
-          />
-          <Card
-            time={'2:12'}
-            dimensions={{ width: 15.625, height: 9.375 }}
-            src={pic8}
-            heading={'Advertising Outdoors'}
-            data={'13k views  ·  15 days ago'}
-            user={'Food & Drink'}
-          />
-          <Card
-            time={'2:12'}
-            dimensions={{ width: 15.625, height: 9.375 }}
-            src={pic9}
-            heading={'Radio Astronomy'}
-            data={'1k views  ·  11 months ago'}
-            user={'Food & Drink'}
-          />
-          <Card
-            time={'2:12'}
-            dimensions={{ width: 15.625, height: 9.375 }}
-            src={pic10}
-            heading={'A Good Autoresponder'}
-            data={'45k views  ·  2 months ago'}
-            user={'Food & Drink'}
-          />
-          <Card
-            time={'2:12'}
-            dimensions={{ width: 15.625, height: 9.375 }}
-            src={pic11}
-            heading={'Baby Monitor Technology'}
-            data={'86k views  ·  7 days ago'}
-            user={'Food & Drink'}
-          />
-          <Card
-            time={'2:12'}
-            dimensions={{ width: 15.625, height: 9.375, lastChildWidth: 13.4375 }}
-            src={pic12}
-            heading={'Asteroids'}
-            data={'123k views  ·  4 months ago'}
-            user={'Dollie Blair'}
-          />
+        <div className='overflow-x-auto w-full scrollbar-none'>
+          <div className='flex sm:gap-10 gap-7.5'>
+            <Card
+              time={'7:36'}
+              className='sm:w-[15.625rem]'
+              src={pic7}
+              heading={'Astronomy Or Astrology'}
+              data={'240k views  ·  4 months ago'}
+              user={'Food & Drink'}
+            />
+            <Card
+              time={'2:19'}
+              className='sm:w-[15.625rem]'
+              src={pic8}
+              heading={'Advertising Outdoors'}
+              data={'13k views  ·  15 days ago'}
+              user={'Food & Drink'}
+            />
+            <Card
+              time={'9:05'}
+              className='sm:w-[15.625rem]'
+              src={pic9}
+              heading={'Radio Astronomy'}
+              data={'1k views  ·  11 months ago'}
+              user={'Food & Drink'}
+            />
+            <Card
+              time={'3:40'}
+              className='sm:w-[15.625rem]'
+              src={pic10}
+              heading={'A Good Autoresponder'}
+              data={'45k views  ·  2 months ago'}
+              user={'Food & Drink'}
+            />
+            <Card
+              time={'1:56'}
+              className='sm:w-[15.625rem]'
+              src={pic11}
+              heading={'Baby Monitor Technology'}
+              data={'86k views  ·  7 days ago'}
+              user={'Food & Drink'}
+            />
+            <Card
+              time={'4:15'}
+              className='sm:w-[15.625rem]'
+              src={pic12}
+              heading={'Asteroids'}
+              data={'123k views  ·  4 months ago'}
+              user={'Dollie Blair'}
+            />
+          </div>
         </div>
-      </div>
-      <div className='sm:hidden flex flex-col items-center gap-7.5'>
-        <Card
-          time={'4:15'}
-          dimensions={{ width: 18, height: 9.375 }}
-          src={pic1}
-          heading={'A Brief History Of Creation'}
-          data={'80k views  ·  3 days ago'}
-          user={'Dollie Blair'}
-        />
-        <Card
-          time={'8:00'}
-          dimensions={{ width: 18, height: 9.375 }}
-          src={pic2}
-          heading={'Selecting The Right Hotel'}
-          data={'123k views  ·  1 months ago'}
-          user={'Dollie Blair'}
-        />
-        <Card
-          time={'5:32'}
-          dimensions={{ width: 18, height: 9.375 }}
-          src={pic3}
-          heading={'Asteroids'}
-          data={'43k views  ·  12 days ago'}
-          user={'Dollie Blair'}
-        />
-        <Card
-          time={'6:40'}
-          dimensions={{ width: 18, height: 9.375 }}
-          src={pic4}
-          heading={'Telescopes 101'}
-          data={'11k views  ·  6 months ago'}
-          user={'Dollie Blair'}
-        />
       </div>
     </div>
   );

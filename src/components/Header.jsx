@@ -2,9 +2,11 @@ import React from 'react';
 import sprite from '../assets/sprite.svg';
 import user from '../assets/Userpic.png';
 
-const Header = ({ style }) => {
+const Header = ({ className }) => {
   return (
-    <header style={style} className='hidden sm:flex w-full h-[44px]  pl-8 pr-17.5 mt-5 mb-12.5'>
+    <header
+      className={`${className ?? ''} bg-white sm:static hidden sm:flex w-full h-[44px]  pl-8 pr-17.5 mt-5 `}
+    >
       <div className='flex items-center flex-1 mr-5'>
         <svg className='shrink-0 mr-7' width='22' height='19'>
           <use xlinkHref={`${sprite}#Menu`} />

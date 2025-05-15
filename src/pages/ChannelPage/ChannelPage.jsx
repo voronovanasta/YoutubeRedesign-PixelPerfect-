@@ -1,20 +1,20 @@
 import React from 'react';
 import Header from '../../components/Header';
 import Sidebar from '../../components/Sidebar';
-import SidebarMobile from '../../components/SidebarMobile';
+import Footer from '../../components/Footer';
 import MainContainer from './MainContainer';
 import HeaderMobile from './HeaderMobile';
 
 const ChannelPage = () => {
   return (
     <>
-      <Header style={{ marginBottom: '1.875rem' }} />
+      <Header className='mb-7.5' />
       <HeaderMobile />
-      <main className='block sm:grid sm:grid-cols-[auto_1fr]'>
-        <Sidebar style={{ marginTop: '1.25rem' }} />
+      <main className='scrollbar-none flex-1 flex flex-col overflow-auto sm:flex-row h-full'>
+        <Sidebar className='mt-5' />
         <MainContainer />
-        <SidebarMobile />
       </main>
+      <Footer />
     </>
   );
 };

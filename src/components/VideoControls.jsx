@@ -4,7 +4,7 @@ import sprite from '../assets/sprite.svg';
 const VideoControls = () => {
   return (
     <>
-      <div className=' hidden ls:flex flex-col absolute left-0 bottom-0 w-full px-8 mb-8 text-[22px] leading-5.5 text-white'>
+      <div className='hidden ls:flex flex-col absolute left-0 bottom-0 w-full px-8 mb-8 text-[22px] leading-5.5 text-white'>
         <div className='flex mb-5'>
           <p className='py-0.5'>1:34</p>
           <p className='py-0.5 ml-auto'>19:00</p>
